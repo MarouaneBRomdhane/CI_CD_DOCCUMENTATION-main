@@ -1,0 +1,14 @@
+version:  '3'
+services:
+  nexus:
+    image: sonatype/nexus3:3.38.0
+    privileged: true
+    user: root
+    container_name: nexus
+    ports:
+      - 8081:8081
+      - 8085:8085
+    volumes:
+      - ~/nexus-data:/nexus-data
+volumes:
+  nexus-data: {}
