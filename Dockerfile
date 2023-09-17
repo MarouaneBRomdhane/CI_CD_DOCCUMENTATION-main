@@ -1,6 +1,6 @@
 FROM node:20.5.1-alpine3.18 as dev
 WORKDIR /app
-COPY package*.json  .
+COPY package*.json  ./
 RUN npm install
 COPY . .
 EXPOSE 3000
