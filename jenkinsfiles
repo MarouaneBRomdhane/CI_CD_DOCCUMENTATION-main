@@ -29,6 +29,59 @@ stages{
        
         }
     }
+    stage('Install SonarScanner CLI') {
+            steps {
+                script {
+                    // Navigate to your project directory
+                    dir('CI_CD_DOCCUMENTATION-MAIN') {
+                        // Install SonarScanner CLI as a project dependency
+                        sh 'npm install --save-dev sonarqube-scanner'
+                    }
+                }
+            }
+        }
+
+        stage('Configure SonarScanner') {
+            steps {
+                script {
+                    // Copy or generate the sonar-project.properties file in your project directory
+                    // You can use 'sh' commands to create or modify the file as needed
+                    sh 'echo "sonar.projectKey=CI_CD_DOCCUMENTATION_MAIN" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.projectName=CI_CD_DOCCUMENTATION-MAIN" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.projectVersion=3" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.sources=/home/marwen/Documents/CI_CD_DOCCUMENTATION-main/src" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.language=java" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.host.url=http://localhost:9001" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+                    sh 'echo "sonar.login=squ_8caa3e864d6776c3b426279de1f69ef0e201952c" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
+
+                    // Add any additional properties and settings as needed
+                }
+            }
+        }
+
+        stage('Run SonarScanner') {
+            steps {
+                script {
+                    // Navigate to your project directory
+                    dir('CI_CD_DOCCUMENTATION') {
+                        // Run the SonarScanner using npm scripts
+                        sh 'npm run sonar'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'SonarScanner analysis completed successfully!'
+            // You can add additional post-processing steps here
+        }
+        failure {
+            echo 'SonarScanner analysis failed!'
+            // You can take action on failure, such as sending notifications
+        }
+    }
     
 }
     

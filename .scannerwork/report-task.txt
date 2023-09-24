@@ -1,0 +1,6 @@
+projectKey=CI_CD_DOCCUMENTATION_MAIN
+serverUrl=http://localhost:9001
+serverVersion=10.2.0.77647
+dashboardUrl=http://localhost:9001/dashboard?id=CI_CD_DOCCUMENTATION_MAIN
+ceTaskId=AYrHdZNdCrVhp71BPsal
+ceTaskUrl=http://localhost:9001/api/ce/task?id=AYrHdZNdCrVhp71BPsal
