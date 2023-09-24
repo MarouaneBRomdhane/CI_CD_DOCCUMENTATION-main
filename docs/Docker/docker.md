@@ -71,3 +71,102 @@ sudo docker run -p 8090:80 -d --name prod sardina
 
 # add jenkins docker-compose 
 we need to create a new file called "docker-compose.yml"
+ # put this code that runs jenkins, sonarqube, sonarscanner, nexus
+ ```
+ # docker-compose.yaml
+version: '3.8'
+services:
+  jenkins:
+    image: jenkins/jenkins:jdk11
+    privileged: true
+    user: root
+    ports:
+      - 8080:8080
+      - 50000:50000
+    container_name: jenkinsserver
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - jenkins-home:/home
+      - /var/run/docker.sock:/var/run/docker.sock
+       
+  nexus:
+    image: sonatype/nexus3
+    container_name: nexus
+    privileged: true
+    user: root
+    ports:
+      - 8081:8081
+      - 8085:8085
+    volumes:
+      - /home/nexus:/nexus-data
+    restart: always
+
+  sonarqube:
+    image: sonarqube
+    restart: unless-stopped
+    container_name: sonarqube
+    environment:
+      - SONARQUBE_JDBC_USERNAME=sonarqube
+      - SONARQUBE_JDBC_PASSWORD=sonarpass
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/sonarqube
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    ports:
+      - "9001:9000"
+  db:
+    image: postgres:13
+    container_name: postgresql
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonar
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - postgresql_data:/var/lib/postgresql/data
+
+volumes:
+  jenkins-data: {}
+  jenkins-home: {}
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  postgresql:
+  postgresql_data:
+ ```
+
+ # to install sonarscanner we need firstly 
+```
+ npm install --save-dev sonarqube-scanner
+```
+# then create a file sonar-scanner.properties
+```
+sonar.projectKey=my-project-key
+
+sonar.projectName=My Project
+sonar.projectVersion=1.0
+
+sonar.sources=src
+
+sonar.language=java
+
+sonar.host.url=http://localhost:
+sonar.login= (write your sonarQube token, open sonarQube > account > security > add token name > type User Token > no expiration > generate > copy and pase here )
+```
+# then go packages.json and add 
+```
+
+"scripts": {
+  "sonar": "sonar-scanner"
+}
+```
+# and then run this command 
+```npm run sonar
+```
+
+
+
+
+
+
