@@ -74,7 +74,8 @@ we need to create a new file called "docker-compose.yml"
  # put this code that runs jenkins, sonarqube, sonarscanner, nexus
  ```
  # docker-compose.yaml
-version: '3.8'
+# docker-compose.yaml
+version: '3.3'
 services:
   jenkins:
     image: jenkins/jenkins:jdk11
@@ -165,6 +166,13 @@ sonar.login= (write your sonarQube token, open sonarQube > account > security > 
 ```npm run sonar
 ```
 
+ # to get the jenkins password we need to enter inside the docker bash using this commaand :
+
+```
+sudo docker exec -it container_name bash
+# cat /var/jenkins_home/secrets/initialAdminPassword
+
+```
 
 
 
