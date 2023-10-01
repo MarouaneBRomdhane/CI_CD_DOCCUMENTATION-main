@@ -1,40 +1,33 @@
 pipeline {
-    
-agent any  
-tools {
-  nodejs 'nodejs20'
-}
+    agent any
+    tools {
+        nodejs 'nodejs'
+        dockerTool 'docker'
+    }
 
-stages{
-    stage("git clone"){
-        steps{
-         git branch:'main', url:'https://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION.git'
+    stages {
+        stage("git clone") {
+            steps {
+                git branch: 'main', url: 'https://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION-main.git'
+            }
         }
-    }
-    
-      stage("install dependencies"){
-        steps{
-     
-           
-           sh 'npm install'
-       
-        }
-    }
-    
-      stage("build the project"){
-        steps{
 
-            sh 'npm run build'
-          
-       
+        stage("install dependencies") {
+            steps {
+                sh 'npm install'
+            }
         }
-    }
-    stage('Install SonarScanner CLI') {
+
+        stage("build the project") {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Install SonarScanner CLI') {
             steps {
                 script {
-                    // Navigate to your project directory
                     dir('CI_CD_DOCCUMENTATION-MAIN') {
-                        // Install SonarScanner CLI as a project dependency
                         sh 'npm install --save-dev sonarqube-scanner'
                     }
                 }
@@ -44,17 +37,13 @@ stages{
         stage('Configure SonarScanner') {
             steps {
                 script {
-                    // Copy or generate the sonar-project.properties file in your project directory
-                    // You can use 'sh' commands to create or modify the file as needed
-                    sh 'echo "sonar.projectKey=CI_CD_DOCCUMENTATION_MAIN" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.projectName=CI_CD_DOCCUMENTATION-MAIN" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.projectVersion=3" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.sources=/home/marwen/Documents/CI_CD_DOCCUMENTATION-main/src" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.language=java" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.host.url=http://localhost:9001" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-                    sh 'echo "sonar.login=squ_8caa3e864d6776c3b426279de1f69ef0e201952c" > /home/marwen/Documents/CI_CD_DOCCUMENTATION-main/sonar-project.properties'
-
-                    // Add any additional properties and settings as needed
+                    sh 'echo "sonar.projectKey=CI_CD_DOCCUMENTATION_MAIN" > ./sonar-project.properties'
+                    sh 'echo "sonar.projectName=CI_CD_DOCCUMENTATION-MAIN" >> ./sonar-project.properties'
+                    sh 'echo "sonar.projectVersion=3" >> ./sonar-project.properties'
+                    sh 'echo "sonar.sources=./src" >> ./sonar-project.properties'
+                    sh 'echo "sonar.language=java" >> ./sonar-project.properties'
+                    sh 'echo "sonar.host.url=http://sonarqube:9000" >> ./sonar-project.properties'
+                    sh 'echo "sonar.login=squ_1a95a09bd281100eda06cad9ad8acf999aafaba7" >> ./sonar-project.properties'
                 }
             }
         }
@@ -62,12 +51,18 @@ stages{
         stage('Run SonarScanner') {
             steps {
                 script {
-                    // Navigate to your project directory
                     dir('CI_CD_DOCCUMENTATION') {
-                        // Run the SonarScanner using npm scripts
                         sh 'npm run sonar'
                     }
                 }
+            }
+        }
+
+        stage('Uploading to Nexus') {
+            steps {
+                sh 'docker login localhost:8085 -u admin -p admin123'
+                sh 'docker tag prod:v1 localhost:8085/nexus/production:v2'
+                sh 'docker push localhost:8085/nexus/production:v2'
             }
         }
     }
@@ -75,12 +70,9 @@ stages{
     post {
         success {
             echo 'SonarScanner analysis completed successfully!'
-            // You can add additional post-processing steps here
         }
         failure {
             echo 'SonarScanner analysis failed!'
-            // You can take action on failure, such as sending notifications
         }
     }
-    
 }
