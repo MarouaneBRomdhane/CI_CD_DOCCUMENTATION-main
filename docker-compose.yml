@@ -14,7 +14,7 @@ services:
       - jenkins-home:/home
       - /var/run/docker.sock:/var/run/docker.sock
        
-  nexus:
+  nexus_:
     image: sonatype/nexus3
     container_name: nexus
     privileged: true
