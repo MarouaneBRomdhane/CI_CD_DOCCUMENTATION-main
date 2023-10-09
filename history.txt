@@ -1,0 +1,510 @@
+    1  sudo apt install curl
+    2  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+    3  export NVM_DIR="$HOME/.nvm"
+    4  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    5  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    6  nvm install node 
+    7  nvm install --lts 
+    8  sudo apt install git
+    9  sudo apt install github-desktop
+   10  https://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION.git
+   11  git clonehttps://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION.git
+   12  git clone https://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION.git
+   13  wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
+   14  git clone https://github.com/MarouaneBRomdhane/CI_CD_DOCCUMENTATION.git
+   15  apt-get update
+   16  sudo apt-get update
+   17  sudo apt-get install ca-certificates
+   18  wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
+   19  unzip cicddevops.zip 
+   20  cd
+   21  sudo kill 2238
+   22  sudo apt install snap
+   23  sudo apt install snap-store
+   24  snap install snap-store
+   25  snap help refresh
+   26  sudo docker build . -t sardina
+   27  sudo docker build . -t wrata
+   28  sudo docker images
+   29  docker run
+   30  docker run -p 80:8080 --name doc wrata
+   31  sudo docker run -p 80:8080 --name doc wrata
+   32  sudo docker build . -t wrata
+   33  sudo docker build . -t sbares
+   34  sudo docker run -p 80:8080 --name doc sbares
+   35  docker run
+   36  sudo docker images
+   37  sudo docker run -p 80:8080 --name doc sbares
+   38  docker run --help
+   39  sudo docker run -p 8080:80 --name doc sbares
+   40  sudo docker run -p 8080:80 --name doc wrata
+   41  sudo docker run -p 80:8080 --name docc wrata
+   42  sudo docker build . -t doc:prod
+   43  sudo docker ps
+   44  sudo docker container prune
+   45  sudo docker images
+   46  sudo docker run -p 80:8081 --name prod doc:prod
+   47  sudo docker run -p 80:8080 --name docl sbares
+   48  sudo docker run -p 80:8081 --name prod doc:prod
+   49  sudo docker run -p 80:8081 --name produ doc:prod
+   50  sudo docker ps
+   51  sudo docker container ps
+   52  sudo docker container prune
+   53  clear
+   54  ls
+   55  npm start
+   56  npm run build
+   57  sudo docker build -t prod:v1 . --target prod
+   58  sudo docker images
+   59  sudo docker run -p 80:8082 --name prodprod:v1
+   60  sudo docker run -p 80:8082 --name prod prod:v1
+   61  docker ps
+   62  sudo docker container prune
+   63  sudo docker run -p 80:8082 --name prod prod:v1 -d
+   64  sudo docker run -p 80:8082 -d --name prod prod:v1
+   65  docker ps 
+   66  sudo docker ps
+   67  sudo docker ps -a
+   68  sudo docker container prune
+   69  sudo docker run -p 80:8082 -d --name prod prod:v1
+   70  sudo docker ps
+   71  sudo docker exec -it ef sh
+   72  sudo docker ps
+   73  sudo docker stop ef
+   74  sudo docker container prune
+   75  sudo docker run -p 80:80 -d --name prod prod:v1
+   76  sudo docker ps
+   77  sudo docker stop 8
+   78  sudo docker container prune
+   79  sudo docker run -p 8090:80 -d --name prod prod:v1
+   80  history
+   81  npm start
+   82  sudo docker-compose up -d
+   83  docker-compose up -d
+   84  sudo apt  install docker-compose
+   85  sudo docker-compose up -d
+   86  sudo docker ps
+   87  sudo docker-compose ps
+   88  sudo docker ps
+   89  sudo docker ps -a
+   90  sudo docker logs c1
+   91  sudo docker ps
+   92  sudo docker logs c1
+   93  sudo docker ps
+   94  sudo docker stop c1
+   95  sudo docker rm c1
+   96  sudo docker-compose up -d
+   97  sudo docker ps
+   98  sudo kill 2238
+   99  sudo apt install gnome-terminal
+  100  sudo apt remove docker-desktop
+  101  sudo apt-get update
+  102  sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+  103  java -jar jenkins.war
+  104  sudo apt install openjdk-11-jre-headless 
+  105  java -jar jenkins.war
+  106  cd /etc/
+  107  ls
+  108  cd
+  109  ls
+  110  cd /etc/
+  111  systemd
+  112  cd *systemd
+  113  cd system/
+  114  ls
+  115  cd
+  116  cd /mib/systemd/system
+  117  cd /lib/systemd/system
+  118  ls
+  119  sudo apt-get update
+  120  snap help refresh
+  121  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  122  for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  123  sudo apt-get install ca-certificates curl gnupg
+  124  sudo install -m 0755 -d /etc/apt/keyrings
+  125  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  126  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  127  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  128    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  129  echo \ "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  130  echo \ "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |  \
+  131  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  132    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  133  sudo apt-get update
+  134  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  135  sudo docker run hello-world
+  136  ctoilet
+  137  sudo apt install toilet
+  138  git bash here
+  139  git bash
+  140  cd html/
+  141  git bash here
+  142  code .
+  143  sudo apt install wget
+  144  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  145  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  146  sudo apt-get install -f
+  147  google-chrome
+  148  git clone https://github.com/MarouaneBRomdhane/odoo.git
+  149  sudo apt-get install wine
+  150  cd
+  151  sudo apt-get install wine
+  152  cd learn_git/
+  153  sudo touch third.txt 
+  154  touch third.txt 
+  155  ls
+  156  git inti
+  157  git init
+  158  git add .
+  159  git commit -m 'adding third.txt'
+  160  git log
+  161  touch fourth.txt
+  162  git add .
+  163  git commit -m 'adding fourth.txt'
+  164  rm third.txt
+  165  git add .
+  166  git commit -m 'removinging third.txt'
+  167  git log
+  168  git config --global core.pager "cat"
+  169  git config --global --get core.pager
+  170  cat
+  171  cd Desktop/
+  172  ls
+  173  cd
+  174  ls
+  175  cd Documents/
+  176  ks
+  177  lq
+  178  ls
+  179  cd learn_git/
+  180  ls
+  181  history
+  182  git config --global core.pager "cat"
+  183  git config --global --get core.pager
+  184  history
+  185  npm start
+  186  docker-compose app
+  187  docker-compose run
+  188  docker-compose up
+  189  sudo docker-compose up -d
+  190  sudo docker ps
+  191  sudo docker-compose up -d
+  192  sudo docker ps
+  193  ls
+  194  sudo docker exec -it 58fc5594ab99
+  195  sudo docker exec -it 58
+  196  sudo docker exec -it 58 sh
+  197  bash
+  198  sudo docker exec -it 58 bash
+  199  sudo docker-compose up -d
+  200  ls
+  201  docker-compose app
+  202  docker-compose run
+  203  sudo docker ps
+  204  sudo docker-compose up -d
+  205  docker ps
+  206  docker ps
+  207  sudo docker ps
+  208  docker stop ci_cd_doccumentation_jenkins_1
+  209  docker stop ci_cd_doccumentation-main_sonarqube_1
+  210  docker stop ci_cd_doccumentation-main_nexus_1
+  211  sudo docker stop ci_cd_doccumentation_jenkins_1
+  212  sudo docker stop ci_cd_doccumentation-main_sonarqube_1
+  213  sudo docker stop ci_cd_doccumentation-main_nexus_1
+  214  sudo docker rm ci_cd_doccumentation_jenkins_1
+  215  sudo docker rm ci_cd_do
+  216  sudo docker rm ci_cd_doccumentation-main_nexus_1
+  217  sudo docker-compose up -d
+  218  sudo docker logs ci_cd_doccumentation-main_nexus_1
+  219  sudo docker-compose up -d
+  220  sudo docker ps
+  221  sudo docker stop ci_cd_doccumentation-main_nexus_1
+  222  sudo docker rm ci_cd_doccumentation-main_nexus_1
+  223  sudo docker ps
+  224  sudo docker-compose up -d
+  225  sudo docker rm ci_cd_doccumentation-main_nexus_1
+  226  sudo docker stop ci_cd_doccumentation-main_nexus_1
+  227  sudo docker rm ci_cd_doccumentation-main_nexus_1
+  228  sudo docker-compose up -d
+  229  sudo docker ps
+  230  sudo docker stop ci_cd_doccumentation_jenkins_1
+  231  sudo docker stop ci_cd_doccumentation-main_sonarqube_1
+  232  sudo docker stop ci_cd_doccumentation-main_nexus_1
+  233  sudo docker stop ci_cd_doccumentation-main_jenkins_1
+  234  sudo docker rm ci_cd_doccumentation-main_jenkins_1
+  235  sudo docker rm ci_cd_doccumentation-main_nexus_1
+  236  sudo docker rm ci_cd_doccumentation-main_sonarqube_1
+  237  sudo docker rm ci_cd_doccumentation-main_sonarqube-db_1
+  238  sudo docker stop ci_cd_doccumentation-main_sonarqube-db_1
+  239  sudo docker rm ci_cd_doccumentation-main_sonarqube-db_1
+  240  sudo docker-compose up -d
+  241  sudo docker-compose down
+  242  sudo docker container prune 
+  243  sudo docker-compose up -d
+  244  sudo docke rps
+  245  sudo docker ps
+  246  sudo docker ps -a
+  247  sudo docker ps
+  248  sudo docker ps -a
+  249  sudo docker logs 18
+  250  sudo docker-compose down
+  251  sudo docker container prune 
+  252  sudo docker-compose up -d
+  253  sudo docker-compose down
+  254  sudo docker container prune 
+  255  sudo docker ps -a
+  256  sudo docker-compose up -d
+  257  cd nexus/
+  258  sudo docker-compose down
+  259  sudo docker-compose up -d
+  260  sudo ./at_startup.sh
+  261  sudo chnod +x at_startup.sh
+  262  sudo chmod +x at_startup.sh
+  263  sudo ./at_startup.sh
+  264  sudo chmod +x install_deps.sh
+  265  sudo ./install_deps.sh 
+  266  sudo ./at_startup.sh
+  267  sudo nano /var/jenkins_home/secrets/initialAdminPassword
+  268  cd /var
+  269  ls
+  270  cd backups/
+  271  ks
+  272  ls
+  273  cd
+  274  cd /lib/
+  275  ls
+  276  cd systemd/system
+  277  ls
+  278  cd
+  279  cd /etc/systemd/system
+  280  ls
+  281  cd
+  282  journalctl -u jenkins.service
+  283  systemctl edit jenkin
+  284  systemctl edit --force --full jenkin.service
+  285  sudo systemctl edit --force --full jenkin.service
+  286  journalctl -u jenkins.service
+  287  sudo nano %L/jenkins/jenkins.log
+  288  sudo systemctl edit --force --full jenkin.service
+  289  journalctl restart jenkins.service
+  290  sudo nano/var/jenkins_home/secrets/initialAdminPassword 
+  291  sudo nano /var/jenkins_home/secrets/initialAdminPassword 
+  292  sudo apt install nodejs
+  293  node -v or node –version
+  294  sudo apt install npm
+  295  clr
+  296  clear
+  297  ping 10.0.2.15
+  298  ifconfig
+  299  sudo apt install net-tools
+  300  ifconfig
+  301  sudo reboot
+  302  top
+  303  chmod a+x transformice.exe
+  304  chmod a+x Transformice.exe
+  305  ./Transformice.exe 
+  306  apt-get install dosbox
+  307  sudo apt-get install dosbox
+  308  dosbox Transformice.
+  309  dosbox Transformice.exe 
+  310  sudo apt-get install wine
+  311  cd
+  312  cd Downloads/
+  313  wine Transformice.exe
+  314  ls
+  315  wine AdobeAIR.exe
+  316  wine Transformice.exe
+  317  ccd
+  318  cd
+  319  lspci -k | grep -A 2 -i "VGA"
+  320  wget https://github.com/intel/graphics-driver/archive/master.tar.gz
+  321  sudo apt install mesa-utils
+  322  glxinfo -B
+  323  sudo apt install -y gpg-agent wget
+  324  wget -qO - https://repositories.intel.com/graphics/intel-graphics.key |
+  325  wget -qO - https://repositories.intel.com/graphics/intel-graphics.key | sudo apt-key add -
+  326  sudo apt-add-repository \
+  327  sudo apt-add-repository \ 'deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu focal main'
+  328  sudo apt-add-repository \'deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu focal main'
+  329  sudo apt-add-repository \ 'deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu focal main'
+  330  sudo apt update
+  331  sudo apt install \
+  332  sudo apt install -y gpg-agent wget
+  333  wget -qO - https://repositories.intel.com/graphics/intel-graphics.key |   sudo apt-key add -
+  334  sudo docker-compose up -d
+  335  sudo docker-compose down
+  336  sudo docker container prune
+  337  sudo docker-compose up -d
+  338  history
+  339  sudo docker-compose up -d
+  340  sudo kill 8085
+  341  sudo netstat -tuln | grep 8085
+  342  sudo docker-compose down
+  343  sudo docker container prune
+  344  sudo docker-compose up -d
+  345  sudo netstat -tuln | grep 8081
+  346  sudo docker ps
+  347  sudo docker ps -a
+  348  ls
+  349  cat docker-compose.yml 
+  350  sudo docke rps
+  351  sudo docker ps
+  352  sudo docker stop 00
+  353  sudo docker container prune
+  354  sudo docker ps
+  355  htop
+  356  top
+  357  sudo apt install htop
+  358  htop
+  359  ls
+  360  sudo docker-compose up 
+  361  ls
+  362  sudo docker-compose up -d
+  363  sudo docker-compose down
+  364  sudo docker-compose prune
+  365  sudo docker-compose prume
+  366  history
+  367  sudo docker container prune
+  368  sudo docker-compose up -d
+  369  sudo docker container prune uumee
+  370  sudo docker-compose down
+  371  sudo docker container prune
+  372  sudo docker-compose up -d
+  373  sudo docker container prune
+  374  sudo docker-compose up -d
+  375  sudo docker container prune
+  376  sudo docker-compose up -d
+  377  sudo docker container pru
+  378  sudo docker-compose down
+  379  sudo docker-compose up
+  380  sudo docker-compose up -d
+  381  sudo docker container ps
+  382  sudo docker ps
+  383  npm install -D sonarqube-scanner
+  384  npm audit fix
+  385  sudo apt update
+  386  sudo apt install nodejs npm
+  387  npm install --save-dev sonarqube-scanner
+  388  npm run sonar
+  389  npm run sonar 
+  390  sonar-scanner
+  391  sudo docker-compose stop
+  392  sudo docker-compose down
+  393  sudo docker-compose3.8 down
+  394  sudo docker-compose 3.8 down
+  395  cd nexus/
+  396  sudo docker-compose down
+  397  sudo docker container prune 
+  398  sudo docker-compose up -d
+  399  sudo docker container prune 
+  400  sudo docker-compose up -d
+  401  sudo docker-compose up 
+  402  ls
+  403  sudo docker-compose up 
+  404  sudo docker-compose down
+  405  sudo docker ps
+  406  sudo docker stop 50d76c32c61d
+  407  sudo docker ps
+  408  sudo docker stop e0a0f567f0da
+  409  sudo docker ps
+  410  sudo docker rm 
+  411  sudo docker rm nexus
+  412  sudo docker rm ci_cd_doccumentation-main_sonarqube-db_1
+  413  sudo docker-compose up -d
+  414  npm run sonar
+  415  sudo docker-compose down
+  416  sudo docker ps
+  417  sudo swapoff -a
+  418  sudo dd if=/dev/zero of=/swapfile bs=1G count=16
+  419  sudo chmod 0600 /swapfile
+  420  sudo mkswap /swapfile
+  421  sudo swapon /swapfile
+  422  sudo docker-compose up -d
+  423  chmod +x NVIDIA-Linux-x86_64-535.113.01.run 
+  424  sudo service lightdm stop
+  425  sudo ./NVIDIA-Linux-x86_64-535.113.01.run 
+  426  htop
+  427  dd if=/dev/zero of=/media/fasthdd/swapfile.img bs=1024 count=1M
+  428  sudo dd if=/dev/zero of=/media/fasthdd/swapfile.img bs=1024 count=1M
+  429  sudo docke rimages
+  430  sudo docker images
+  431  htop
+  432  lspci -k |grep -A 2 -i "VGA"
+  433  sudo docker-compose down
+  434  sudo docker ps
+  435  sudo docker-compose down
+  436  sudo docker rm ff2a2cf9cb65
+  437  sudo docker stop ff2a2cf9cb65
+  438  sudo docker ps
+  439  sudo docker rm ff2a2cf9cb6
+  440  sudo docker stop 28e0a087e409
+  441  sudo docker rm 28e0a087e409
+  442  sudo docker rm cd0248861653
+  443  sudo docker stop cd0248861653
+  444  sudo docker rm cd0248861653
+  445  sudo docker stop 16fa3b1fafff
+  446  sudo docker rm 16fa3b1fafff
+  447  ps
+  448  sudo docker ps
+  449  cd Desktop/
+  450  cd ci_cd_documentation/
+  451  ls
+  452  cp pppppppppp.txt /home
+  453  sudo cp pppppppppp.txt /home
+  454  sudo chown -R marwen:marwen pppppppppp.txt 
+  455  ls -l
+  456  chmod 775 /path/to/directory/containing/pppppppppp.txt
+  457  sudo chmod 775 pppppppppp.txt
+  458  ls -l pppppppppp.txt
+  459  sudo chmod 777 pppppppppp.txt
+  460  ls -l pppppppppp.txt
+  461  cat pppppppppp.txt
+  462  sudo cat pppppppppp.txt
+  463  fsck /path/to/directory/containing/pppppppppp.txt
+  464  getfattr -d pppppppppp.txt
+  465  sudo apt install attr
+  466  getfattr -d pppppppppp.txt
+  467  getfacl pppppppppp.txt
+  468  fsck pppppppppp.txt
+  469  whereami
+  470  sudo apt install whereami
+  471  whereami
+  472  fsck /media/marwen/TOSHIBA EXT/D/has all/folders/NOTES$/pppppppppp.txt
+  473  cp pppppppppp.txt /home
+  474  sudo cp pppppppppp.txt /home
+  475  chmod -R 751 ./pppppppppp.txt
+  476  cp pppppppppp.txt /Home
+  477  sudo cp pppppppppp.txt /Home
+  478  sudo cp pppppppppp.txt /Home
+  479  cd
+  480  sudo apt-get update
+  481  sudo apt-get install nodejs npm
+  482  npm install web3
+  483  ls -a
+  484  cd .
+  485  ls
+  486  ls -a
+  487  cd .
+  488  cd ..
+  489  ls -a
+  490  cd
+  491  htop
+  492  source ~/.bashrc
+  493  minikube start
+  494  sudo docker compose ps
+  495  docker img
+  496  sudo docker imgage
+  497  sudo docker image
+  498  sudo docker images
+  499  docker tag prod:v1 marwenbr/fish:docker_hub
+  500  docker push marwenbr/fish:docker_hub
+  501  sudo docker push marwenbr/fish:docker_hub
+  502  docker login
+  503  sudo docker push marwenbr/fish:docker_hub
+  504  docker ps
+  505  sudo docker login -u mohamedmarouane.benromdhane@polytechnicien.tn 
+  506  docker tag prod:v1 marwenbr
+  507  /
+  508  docker tag prod:v1 marwenbr/fish:v1
+  509  sudo docker push marwenbr/fish:v1
+  510  history > history.txt
