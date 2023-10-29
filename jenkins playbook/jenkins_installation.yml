@@ -1,0 +1,45 @@
+---
+- name: Install Jenkins
+  hosts: all
+  become: yes  # Run tasks as sudo
+  
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+      
+    - name: Install Java (OpenJDK)
+      apt:
+        name: openjdk-11-jdk
+        state: present
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+      
+    - name: Add Jenkins GPG key
+      apt_key:
+        url: https://pkg.jenkins.io/debian/jenkins.io.key
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+      
+    - name: Add Jenkins repository
+      apt_repository:
+        repo: deb http://pkg.jenkins.io/debian-stable binary/
+        state: present
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+      
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+
+    - name: Start Jenkins service
+      service:
+        name: jenkins
+        state: started
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
+
+    - name: Enable Jenkins service on boot
+      service:
+        name: jenkins
+        enabled: yes
+      when: ansible_os_family == "Debian"  # Check if the OS is Debian-based
