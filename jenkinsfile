@@ -37,13 +37,13 @@ pipeline {
         stage('Configure SonarScanner') {
             steps {
                 script {
-                    sh 'echo "sonar.projectKey=CI_CD_DOCCUMENTATION_MAIN" > ./sonar-project.properties'
-                    sh 'echo "sonar.projectName=CI_CD_DOCCUMENTATION-MAIN" >> ./sonar-project.properties'
+                    sh 'echo "sonar.projectKey=devops_project" > ./sonar-project.properties'
+                    sh 'echo "sonar.projectName=devops_project-MAIN" >> ./sonar-project.properties'
                     sh 'echo "sonar.projectVersion=3" >> ./sonar-project.properties'
                     sh 'echo "sonar.sources=./src" >> ./sonar-project.properties'
                     sh 'echo "sonar.language=java" >> ./sonar-project.properties'
                     sh 'echo "sonar.host.url=http://sonarqube:9000" >> ./sonar-project.properties'
-                    sh 'echo "sonar.login=squ_1a95a09bd281100eda06cad9ad8acf999aafaba7" >> ./sonar-project.properties'
+                    sh 'echo "sonar.login=sqp_f033c22724be888bdca05e2cb5a3fcc301dab0e3" >> ./sonar-project.properties'
                 }
             }
         }

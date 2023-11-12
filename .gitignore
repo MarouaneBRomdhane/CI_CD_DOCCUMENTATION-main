@@ -17,3 +17,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+docker_compose/nexus-data
+terraform/.*
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backups
