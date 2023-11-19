@@ -60,9 +60,8 @@ pipeline {
 
         stage('Uploading to Nexus') {
             steps {
-                sh 'docker login localhost:8085 -u admin -p admin123'
-                sh 'docker tag prod:v1 localhost:8085/nexus/production:v2'
-                sh 'docker push localhost:8085/nexus/production:v2'
+                sh 'docker login -u admin -p admin123# http://localhost:8081/'
+               
             }
         }
     }
