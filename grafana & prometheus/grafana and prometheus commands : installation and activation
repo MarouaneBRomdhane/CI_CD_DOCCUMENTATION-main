@@ -1,0 +1,19 @@
+to activate the prometheus :
+  276  sudo docker exec -it container_name bash
+  277  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  278  sudo docker exec -it container_name bash
+  279  sudo docker exec -it jenkinsserver bash
+  280  cd /etc/docker/
+  281  ls
+  282  kubectl get svc -n monitoring
+  283  kubectl port-forward service/prometheus-server -n monitoring 8070:80
+
+to activate and install grafana :
+sudo docker exec -it container_name bash
+  277  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  278  sudo docker exec -it container_name bash
+  279  sudo docker exec -it jenkinsserver bash
+  280  sudo docker compose up -d
+  281  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  282  kubectl create namespace devopsnamespace
+  283  kubectl get pods
