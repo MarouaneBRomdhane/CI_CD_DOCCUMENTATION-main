@@ -1,0 +1,405 @@
+    1  nvidia
+    2  nvidia -me
+    3  sudo apt update
+    4  sudo apt install os-prober
+    5  sudo os-prober
+    6  lsblk
+    7  sudo mount /dev/nvme0n1p1
+    8  sudo mount /dev/nvme0n1p1 /mnt
+    9  lsblk
+   10  sudo ls -la /mnt/EFI/
+   11  sudo cp -ax /mnt/EFI/Microsoft /boot/efi/EFI
+   12  sudo ls -lh /boot/efi/EFI
+   13  fwupdmgr get-upgrades
+   14  sudo reboot
+   15  ls
+   16  code .
+   17  cd
+   18  sudo snap install --classic code
+   19  sudo apt update && sudo apt upgrade -y
+   20  vagrant up
+   21  sudo apt update && sudo apt upgrade -y
+   22  sudo apt install code -y
+   23  code .
+   24  ls
+   25  cd Desktop/
+   26  ls
+   27  cd ..
+   28  sudo apt install virtualbox
+   29  sudo  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   30  *
+   31  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   32  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   33  sudo apt update && sudo apt install vagrant
+   34  vagrant init
+   35  cd vagrant/
+   36  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   37  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   38  sudo apt update && sudo apt install vagrant
+   39  sudo apt install virtualbox
+   40  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   41  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   42  sudo apt update && sudo apt install vagrant
+   43  vagrant init
+   44  ssh-keygen
+   45  vagrant up
+   46  vagrant ssh
+   47  ssh marwen@192.168.56.1
+   48  ssh marwen@pop-os@192.168.56.1*
+   49  ssh marwen@pop-os@192.168.56.1
+   50  ssh marwen@192.168.56.1
+   51  vagrant ssh
+   52  ssh marwen@192.168.56.10
+   53  ssh marwen@192.168.56.10 -i ~/.ssh/id_rsa
+   54  ssh opsuser@192.168.56.10 -i ~/.ssh/id_rsa
+   55  ls
+   56  ansible-playbook playbook-docker.yaml -i hosts
+   57  sudo apt install ansible
+   58  ansible-playbook playbook-docker.yaml -i hosts
+   59  cd ..
+   60  cd playbook/
+   61  ansible-playbook playbook-docker.yaml -i hosts
+   62  ansible-playbook playbook-docker.yml -i hosts
+   63  sudo ansible-playbook playbook-docker.yml -i hosts
+   64  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa playbook-docker.yaml -i hosts
+   65  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa playbook-docker.yml -i hosts
+   66  sudo ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa playbook-docker.yml -i hosts
+   67  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa playbook-docker.yml -i hosts
+   68  vagrant provision
+   69  cd ..
+   70  cd vagrant/
+   71  vagrant provision
+   72  cd ..
+   73  cd playbook/
+   74  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa playbook-docker.yml -i hosts
+   75  cd ..
+   76  cd jenkins\ playbook/
+   77  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa jenkins_installation..yml -i hosts
+   78  ansible-playbook --user=opsuser --private-key=~/.ssh/id_rsa jenkins_installation.yml -i hosts
+   79  cd /usr/share/applications/
+   80  ks
+   81  ls
+   82  sudo rm github-desktop.desktop
+   83  ls
+   84  cd
+   85  sudo apt remove github-desktop
+   86  rm -rf ~/.config/GitHub\ Desktop/
+   87  github-desktop --version
+   88  cd ~
+   89  ls -d */
+   90  wget https://github.com/shiftkey/desktop/releases/download/release-2.9.3-linux3/GitHubDesktop-linux-2.9.3-linux3.deb
+   91  &
+   92  sudo apt install gdebi-core
+   93  sudo gdebi /home/your_username/downloads/GitHubDesktop-linux-2.9.3-linux3.deb
+   94  ls
+   95  sudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb
+   96  github desktop
+   97  history
+   98  cd .ssh
+   99  ls
+  100  ssh-keygen
+  101  cd
+  102  ipconfig
+  103  ifconfig
+  104  cd ~/.ssh/is_rsa
+  105  ls
+  106  cd ~/.ssh/id*_rsa
+  107  cd ~/.ssh/id_rsa
+  108  cd ~/.ssh
+  109  ls
+  110  cd ..
+  111  mkdir terraform
+  112  cd terraform/
+  113  terraform init
+  114  nano main.tf
+  115  terraform init
+  116  az login --use-device-code
+  117  terraform init
+  118  terraform apply 
+  119  az vm show -d -g myResourceGroup -n myVM --query publicIps -o tsv
+  120  terraform apply 
+  121  terraform init
+  122  terraform apply
+  123  az vm show -d -g myFirstgroupAzure -n myVM --query publicIps -o tsv
+  124  az vm show -d -g myFirstgroupAzure -n VMmarwen --query publicIps -o tsv
+  125  terraform destroy
+  126  terraform apply
+  127  terraform destroy
+  128  terraform apply
+  129  ssh VMmarwen@20.85.208.103
+  130  sudo ssh VMmarwen@20.85.208.103
+  131  hisotry | grep rsa
+  132  history | grep rsa
+  133  sudo ssh azureuser@20.85.208.103 -i ~/.ssh/id_rsa
+  134  sudo apt update
+  135  sudo apt install terraform
+  136  sudo apt install  software-properties-common gnupg2 curl
+  137  sudo install -o root -g root -m 644 hashicorp.gpg /etc/apt/trusted.gpg.d/
+  138  curl https://apt.releases.hashicorp.com/gpg | gpg --dearmor > hashicorp.gpg
+  139  sudo install -o root -g root -m 644 hashicorp.gpg /etc/apt/trusted.gpg.d/
+  140  sudo apt install terraform
+  141  terraform --version
+  142  cd terraform/
+  143  cd ~/terraform
+  144  ls
+  145  terraform init
+  146  whereis terraform
+  147  mkdir terraform
+  148  cd terraform/
+  149  sudo nano main.tf
+  150  ls
+  151  sudo nano main.tf 
+  152  terraform init
+  153  az login
+  154  azure login
+  155  sudo apt install azure-cli
+  156  cd
+  157  sudo apt install azure-cli
+  158  cd terraform/
+  159  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  160  az login
+  161  azure
+  162  azure --version
+  163  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  164  sudo apt-get update
+  165  sudo apt-get install ca-certificates curl apt-transport-https lsb-release gnupg
+  166  sudo mkdir -p /etc/apt/keyrings
+  167  curl -sLS https://packages.microsoft.com/keys/microsoft.asc |     gpg --dearmor |     sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
+  168  sudo chmod go+r /etc/apt/keyrings/microsoft.gpg
+  169  AZ_DIST=$(lsb_release -cs)
+  170  echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/azure-cli/ $AZ_DIST main" |     sudo tee /etc/apt/sources.list.d/azure-cli.list
+  171  sudo apt-get update
+  172  sudo apt-get install azure-cli
+  173  az upgrade
+  174  az login
+  175  az login --use-device-code
+  176  echo bro 
+  177  toilet BRO
+  178  sudo apt install toilet
+  179  toilet bro
+  180  toilet BRO
+  181  toilet toilet
+  182  toilet Maroua is crazy 
+  183  clear
+  184  toilet Maroua is crazy 
+  185  history
+  186  history | grep az
+  187  az login --use-device-code
+  188  nano SonarQube tocken
+  189  tar -xf git-lfs-linux-amd64-v2.9.0.tar.gz
+  190  chmod 755 install.sh
+  191  sudo ./install.sh
+  192  git lfs install
+  193  git lfs track "*.m"
+  194  exit
+  195  toilet amine ya wa7CH
+  196  toilet chams is a future Adrew Tate
+  197  clear
+  198  toilet food food food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food 
+  199  toilet food food food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food food  food food
+  200  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  201  sudo docker exec -it jenkins bash
+  202  sudo docker ps
+  203  sudo docker exec -it cf bash
+  204  cd nexus/
+  205  sudo docker compose up -d
+  206  ls
+  207  cd
+  208  ls
+  209  cd Documents/GitHub/CI_CD_DOCCUMENTATION-main/
+  210  LS
+  211  ls
+  212  ls -a
+  213  cd nexus/
+  214  ls -&
+  215  ls -a
+  216  sudo docker exec -it nexus bash
+  217  cd ..
+  218  git add .
+  219  cd CI_CD_DOCCUMENTATION-main/
+  220  git add .
+  221  git commit -m " adding sonnar scanner"
+  222  git push
+  223  git lfs track 'terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.79.0/linux_amd64/terraform-provider-azurerm_v3.79.0_x5'
+  224  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  225  git lfs track 'terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.79.0/linux_amd64/terraform-provider-azurerm_v3.79.0_x5'
+  226  git lfs install
+  227  git: 'lfs' is not a git command. See 'git --help'.
+  228  The most similar command is
+  229  git lfs install
+  230  git: 'lfs' is not a git command. See 'git --help'.
+  231  The most similar command is
+  232  git lfs version
+  233  export PATH=$PATH:/path/to/git-lfs
+  234  git push
+  235  git push origin main
+  236  git lfs track 'terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.79.0/linux_amd64/terraform-provider-azurerm_v3.79.0_x5'
+  237  git add .gitattributes
+  238  git add terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.79.0/linux_amd64/terraform-provider-azurerm_v3.79.0_x5
+  239  git commit -m "Use Git LFS for large file"
+  240  git push
+  241  git lfs track "*.m"
+  242  git add .gitattributes
+  243  vi .gitattributes
+  244  cd ..
+  245  cp -rf CI_CD_DOCCUMENTATION-main/ pp
+  246  cd CI_CD_DOCCUMENTATION-main/
+  247  git reset --soft HEAD~
+  248  git reset  HEAD~
+  249  git reset HEAD~  
+  250  ls
+  251  cp -rf ../pp/. .
+  252  git reset HEAD~  
+  253  git add .
+  254  git commit -m "update files" 
+  255  git push
+  256  sudo docker compose up -d
+  257  sudo docker ps
+  258  cd ..
+  259  docker ps
+  260  curl -fsSL https://test.docker.com -o test-docker.sh
+  261  sudo sh test-docker.sh
+  262  curl -fsSL https://get.docker.com -o get-docker.sh
+  263  sh get-docker.sh
+  264  docker compose up -d
+  265  sudo docker compose up -d
+  266  sudo nano /var/jenkins_home/secrets/initialAdminPassword
+  267  cd /var/
+  268  ls
+  269  whereis initialAdminPassword
+  270  cd ..
+  271  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  272  ls
+  273  cd jenkins\ playbook/
+  274  ls
+  275  cd
+  276  [200~sudo docker exec -it container_name bash
+  277  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  278  sudo docker exec -it container_name bash
+  279  sudo docker exec -it jenkinsserver bash
+  280  sudo docker compose up -d
+  281  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  282  kubectl create namespace devopsnamespace
+  283  kubectl get pods
+  284  history
+  285  docker compose up -d
+  286  sudo docker compose up -d
+  287  cd nexus/
+  288  sudo docker up -d
+  289  sudo docker compose up -d
+  290  sudo docker compose ps
+  291  cd ..
+  292  kubectl create namespace argocd
+  293  sudo apt-get install -y apt-transport-https ca-certificates curl
+  294  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+  295  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  296  sudo apt-get update
+  297  sudo apt-get install -y kubectl
+  298  kubectl create namespace argocd
+  299  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  300  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  301  minikube start
+  302  kube get pod -n argocd
+  303  kubectl get pod -n argocd
+  304  kubectl -n argocd pods -w
+  305  kubectl get namespace
+  306  kubectl -n argocd pods -w
+  307  kubectl
+  308  kubectl get -n argocd pods -w
+  309  kubectl get -n argocd svc -w
+  310  kubectl port-forward service/argocd-server -n argocd 8090:80
+  311  cd /etc/docker/
+  312  ls
+  313  kubectl get svc -n monitoring
+  314  kubectl port-forward service/prometheus-server -n monitoring 8070:80
+  315  history
+  316  cd
+  317  minikube
+  318  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  319  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  320  minikube
+  321  minikube start
+  322  sudo apt-get update
+  323  curl https://raw.githubusercontent.com/helm/helm/main/script/get-helm-3 | bash
+  324  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  325  ls
+  326  cd /usr/local/bin/
+  327  ls
+  328  cd helm
+  329  cd
+  330  where is helm_charts
+  331  whereis helm_charts
+  332  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  333  ls
+  334  cd remote-development-environment/
+  335  ls
+  336  cd helm_charts/
+  337  cd prometheus_chart
+  338  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  339  kubectl get pause
+  340  kubectl get pods
+  341  helm install prometheus prometheus-community/prometheus -n monitoring --create-namespace -f prometheus_values.yaml --version 19.0.0
+  342  kubectl get pods
+  343  kubectl get pods monigoting
+  344  kubectl get pods monitoring
+  345  kubectl get pods -namespace monitoring
+  346  kubectl get pods --namespace monitoring
+  347  helm repo add grafana https://grafana.github.io/helm-charts
+  348  kubectl get pods -n monitoring
+  349  htop
+  350  sudo apt install htop
+  351  htop
+  352  kubectl get pods -n monitoring
+  353  kubectl port-forward service/grafana -n monitoring 8090:80
+  354  kubectl port-forward service/grafana -n monitoring 8091:80
+  355  history
+  356  cd
+  357  dclear
+  358  clear
+  359  toilet CHMAS ECHAMOUSSA TAL3AT YA MA7LEHA CHAMS L CHAMOUSSA
+  360  minikube profile list
+  361  minikube delete --profile labme
+  362  kubectl get pods
+  363  minikube create --nodes 3 -p ihateyou
+  364  minikube start --nodes 3 -p ihateyou
+  365  docker
+  366  docker status docker.serice
+  367  sudo systemctl status docker.serice
+  368  sudo systemctl status docker
+  369  sudo systemctl enable kubelet.service
+  370  sudo systemctl enable kubelet
+  371  sudo systemctl kubectl
+  372  kubectl get pods
+  373  kubectl get nodes
+  374  minikube delete
+  375  minikube delete --profile ihateyou
+  376  kubectl get pods
+  377  minikube profile list 
+  378  minikube start --nodes 2 -p labme
+  379  minikube stqtus
+  380  minikube status
+  381  minikube profile list
+  382  kubectl get no
+  383  minikube start --nodes 2 -p prod --driver=docker
+  384  sudo minikube start --nodes 2 -p prod --driver=docker
+  385  docker 
+  386  docker ps
+  387  sudo service docker restart
+  388  docker ps
+  389  source
+  390  exit
+  391  docker ps
+  392  logout
+  393  exit
+  394  cd terraform/
+  395  terraform init
+  396  terraform apply
+  397  terraform init
+  398  terraform apply
+  399  ping localhost
+  400  ifconfig
+  401  ping 172.17.0.1
+  402  ping 8.8.8.8
+  403  cd ..
+  404  history 
+  405  history >> CI_CD_DOCUMENTATION_PATH_COMMANDS.txt
