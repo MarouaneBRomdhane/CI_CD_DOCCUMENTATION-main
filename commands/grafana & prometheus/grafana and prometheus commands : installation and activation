@@ -1,0 +1,65 @@
+to activate the prometheus :
+  276  sudo docker exec -it container_name bash
+  277  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  278  sudo docker exec -it container_name bash
+  279  sudo docker exec -it jenkinsserver bash
+  280  cd /etc/docker/
+  281  ls
+  282  kubectl get svc -n monitoring
+  283  kubectl port-forward service/prometheus-server -n monitoring 8070:80
+
+to activate and install grafana :
+sudo docker exec -it container_name bash
+  277  cd ~/Documents/GitHub/CI_CD_DOCCUMENTATION-main
+  278  sudo docker exec -it container_name bash
+  279  sudo docker exec -it jenkinsserver bash
+  280  sudo docker compose up -d
+  281  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  282  kubectl create namespace devopsnamespace
+  283  kubectl get pods
+  
+  
+  
+  
+  somehting related :
+  
+  cd
+  281  minikube
+  282  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  283  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  284  minikube
+  285  minikube start
+  286  sudo apt-get update
+  287  curl https://raw.githubusercontent.com/helm/helm/main/script/get-helm-3 | bash
+  288  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  289  ls
+  290  cd /usr/local/bin/
+  291  ls
+  292  cd helm
+  293  cd
+  294  where is helm_charts
+  295  whereis helm_charts
+  296  curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  297  ls
+  298  cd remote-development-environment/
+  299  ls
+  300  cd helm_charts/
+  301  cd prometheus_chart
+  302  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  303  kubectl get pause
+  304  kubectl get pods
+  305  helm install prometheus prometheus-community/prometheus -n monitoring --create-namespace -f prometheus_values.yaml --version 19.0.0
+  306  kubectl get pods
+  307  kubectl get pods monigoting
+  308  kubectl get pods monitoring
+  309  kubectl get pods -namespace monitoring
+  310  kubectl get pods --namespace monitoring
+  311  helm repo add grafana https://grafana.github.io/helm-charts
+  312  kubectl get pods -n monitoring
+  313  htop
+  314  sudo apt install htop
+  315  htop
+  316  kubectl get pods -n monitoring
+  317  kubectl port-forward service/grafana -n monitoring 8090:80
+  318  kubectl port-forward service/grafana -n monitoring 8091:80
+
